@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  background-color: skyblue;
+}
+
+#timer-container {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Digital", sans-serif;
+}
+
+#timer-value {
+  margin-bottom: 20px;
+}
+
+.start-button,
+.stop-button,
+.rest-button,
+.reset-button {
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px 1px rgba(6, 1, 6, 0.148);
+  margin: 10px 10px;
+  padding: 5px 25px;
+}
+
+.start-button {
+  background-color: green;
+  color: white;
+}
+
+.stop-button {
+  background-color: red;
+  color: white;
+}
+
+.rest-button {
+  background-color: blue;
+  color: white;
+}
+
+.reset-button {
+  background-color: yellow;
+  color: black;
+}
+
+.start-button:hover,
+.stop-button:hover,
+.rest-button:hover,
+.reset-button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.start-button:disabled,
+.stop-button:disabled {
+  opacity: .15;
+  cursor: not-allowed;
+}
