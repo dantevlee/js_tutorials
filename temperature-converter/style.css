@@ -1,0 +1,10 @@
+body {
+  background-color: #cffefc;
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  border-radius: 10px;
+}
