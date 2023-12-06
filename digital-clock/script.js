@@ -4,12 +4,14 @@ function displayClock() {
   let hours = time.getHours()
   const minutes = time.getMinutes().toString().padStart(2,0);
   const seconds = time.getSeconds().toString().padStart(2,0);
+ 
+  let isAmOrPM = hours < 12 ? 'AM' : 'PM';
 
   hours = hours >= 13 ? hours - 12 : hours;
+
   if (hours === 0) {
     hours = 12;
   }
-  let isAmOrPM = hours < 12 ? 'AM' : 'PM';
 
   timeDisplay.textContent = `${hours}:${minutes}:${seconds} ${isAmOrPM}`;
 }
