@@ -6,13 +6,12 @@ function displayClock() {
   const seconds = time.getSeconds().toString().padStart(2,0);
 
   hours = hours >= 13 ? hours - 12 : hours;
+  if (hours === 0) {
+    hours = 12;
+  }
+  let isAmOrPM = hours < 12 ? 'AM' : 'PM';
 
-  timeDisplay.textContent = `${hours}:${minutes}:${seconds} ${isAmOrPM(time.getHours())}`;
-}
-
-function isAmOrPM(date){
-  date.getHours < 12 ? timeOfDay = 'AM' : timeOfDay = 'PM'; 
-  return timeOfDay;
+  timeDisplay.textContent = `${hours}:${minutes}:${seconds} ${isAmOrPM}`;
 }
 
 const months = [
